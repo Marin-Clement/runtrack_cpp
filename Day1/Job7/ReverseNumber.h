@@ -10,7 +10,6 @@ class ReverseNumber {
 public:
     static void getNumber();
     static void reverseNumber(int a);
-    static void display(int a);
 };
 
 
