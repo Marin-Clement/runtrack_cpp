@@ -8,7 +8,7 @@
 
 class Table {
 public:
-    static int* addElement(int* arr, int& size, int element);
+    static int* addElement(const int* arr, int& size, int element);
     static void showTable(int* arr, int size);
 };
 

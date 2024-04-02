@@ -8,7 +8,7 @@
 #include <random>
 
 
-int* Table::addElement(int* arr, int& size, int element) {
+int* Table::addElement(const int* arr, int& size, int element) {
     int* newArray = new int[size + 1];
     for (int i = 0; i < size; i++) {
         newArray[i] = arr[i];
