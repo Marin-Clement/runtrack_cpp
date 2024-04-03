@@ -6,11 +6,12 @@
 
 #include <utility>
 
-Penguin::Penguin(std::string  name, double swimSpeed, double walkSpeed, double slideSpeed)
+Penguin::Penguin(std::string name, double swimSpeed, double walkSpeed, double slideSpeed)
         : Aquatic(swimSpeed), Terrestrial(walkSpeed), _name(std::move(name)), _slideSpeed(slideSpeed) {}
 
-Penguin::Penguin(const Penguin& other)
-        : Aquatic(other._swimSpeed), Terrestrial(other._walkSpeed), _name(other._name), _slideSpeed(other._slideSpeed) {}
+Penguin::Penguin(const Penguin &other)
+        : Aquatic(other._swimSpeed), Terrestrial(other._walkSpeed), _name(other._name),
+          _slideSpeed(other._slideSpeed) {}
 
 
 void Penguin::swim() {

@@ -11,6 +11,7 @@ protected:
     double _swimSpeed;
 public:
     Aquatic(double swimSpeed) : _swimSpeed(swimSpeed) {}
+
     virtual void swim() = 0;
 };
 

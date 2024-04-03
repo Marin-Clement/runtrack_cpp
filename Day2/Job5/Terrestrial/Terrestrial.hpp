@@ -11,6 +11,7 @@ protected:
     double _walkSpeed;
 public:
     explicit Terrestrial(double walkSpeed) : _walkSpeed(walkSpeed) {}
+
     virtual void walk() = 0;
 };
 

@@ -16,13 +16,19 @@ private:
     std::string _name;
     double _slideSpeed;
 public:
-    Penguin(std::string  name, double swimSpeed, double walkSpeed, double slideSpeed);
-    Penguin(const Penguin& other); // Copy constructor
+    Penguin(std::string name, double swimSpeed, double walkSpeed, double slideSpeed);
+
+    Penguin(const Penguin &other); // Copy constructor
     void swim() override;
+
     void walk() override;
+
     void introduce() const;
+
     void setSwimSpeed(double speed);
+
     void setWalkSpeed(double speed);
+
     void setSlideSpeed(double speed);
 };
 

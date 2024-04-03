@@ -14,12 +14,14 @@ double Penguin::timeToCompleteTrack() const {
 }
 
 void Penguin::displayTrackTimes() {
-    for (const auto& weakPenguin : allPenguins) {
+    for (const auto &weakPenguin: allPenguins) {
         if (auto penguin = weakPenguin.lock()) {
-            std::cout << penguin->_name << " completes the track in " << penguin->timeToCompleteTrack() << " seconds.\n";
+            std::cout << penguin->_name << " completes the track in " << penguin->timeToCompleteTrack()
+                      << " seconds.\n";
         }
     }
 }
+
 Penguin::Penguin(std::string name, double swimSpeed, double walkSpeed, double slideSpeed)
         : Aquatic(swimSpeed), Terrestrial(walkSpeed), _name(std::move(name)), _slideSpeed(slideSpeed) {}
 

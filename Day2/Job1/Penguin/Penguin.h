@@ -15,9 +15,12 @@ class Penguin : public Aquatic, public Terrestrial {
 private:
     std::string _name;
 public:
-    explicit Penguin(std::string  name);
+    explicit Penguin(std::string name);
+
     void swim() override;
+
     void walk() override;
+
     void introduce() const;
 };
 

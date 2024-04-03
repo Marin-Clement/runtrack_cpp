@@ -16,7 +16,7 @@ double Penguin::timeToCompleteTrack() const {
 void Penguin::displayTrackTimes() {
     // Sort allPenguins by track completion time
     std::sort(allPenguins.begin(), allPenguins.end(),
-              [](const std::weak_ptr<Penguin>& a, const std::weak_ptr<Penguin>& b) {
+              [](const std::weak_ptr<Penguin> &a, const std::weak_ptr<Penguin> &b) {
                   auto penguinA = a.lock();
                   auto penguinB = b.lock();
                   if (penguinA && penguinB) {
@@ -26,9 +26,10 @@ void Penguin::displayTrackTimes() {
               });
 
     // Display track times
-    for (const auto& weakPenguin : allPenguins) {
+    for (const auto &weakPenguin: allPenguins) {
         if (auto penguin = weakPenguin.lock()) {
-            std::cout << penguin->_name << " completes the track in " << penguin->timeToCompleteTrack() << " seconds.\n";
+            std::cout << penguin->_name << " completes the track in " << penguin->timeToCompleteTrack()
+                      << " seconds.\n";
         }
     }
 }

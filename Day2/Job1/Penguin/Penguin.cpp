@@ -6,7 +6,7 @@
 
 #include <utility>
 
-Penguin::Penguin(std::string  name) : _name(std::move(name)) {
+Penguin::Penguin(std::string name) : _name(std::move(name)) {
     _swimSpeed = 100;
     _walkSpeed = 10;
 }

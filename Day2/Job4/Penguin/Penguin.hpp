@@ -20,19 +20,31 @@ private:
     std::string _name;
     double _slideSpeed;
     std::shared_ptr<Penguin> self;
+
     static void cleanUp();
+
 public:
     static std::vector<std::weak_ptr<Penguin>> allPenguins;
-    Penguin(std::string  name, double swimSpeed, double walkSpeed, double slideSpeed);
-    Penguin(const Penguin& other); // Copy constructor
+
+    Penguin(std::string name, double swimSpeed, double walkSpeed, double slideSpeed);
+
+    Penguin(const Penguin &other); // Copy constructor
     ~Penguin();
+
     void swim() override;
+
     void walk() override;
+
     void introduce() const;
+
     void setSwimSpeed(double speed);
+
     void setWalkSpeed(double speed);
+
     void setSlideSpeed(double speed);
+
     double timeToCompleteTrack() const;
+
     static void displayTrackTimes();
 };
 
