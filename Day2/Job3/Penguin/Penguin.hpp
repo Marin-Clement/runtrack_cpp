@@ -24,7 +24,7 @@ private:
     static void cleanUp();
 
 public:
-    static std::vector<std::weak_ptr<Penguin>> allPenguins;
+    static std::vector<std::shared_ptr<Penguin>> allPenguins;
 
     Penguin(std::string name, double swimSpeed, double walkSpeed, double slideSpeed);
 

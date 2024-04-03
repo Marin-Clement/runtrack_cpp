@@ -4,7 +4,7 @@
 
 #include "Penguin.hpp"
 
-std::vector<std::weak_ptr<Penguin>> Penguin::allPenguins;
+std::vector<std::shared_ptr<Penguin>> Penguin::allPenguins;
 
 Penguin::Penguin(std::string name, double swimSpeed, double walkSpeed, double slideSpeed)
         : Aquatic(swimSpeed), Terrestrial(walkSpeed), _name(std::move(name)), _slideSpeed(slideSpeed) {
