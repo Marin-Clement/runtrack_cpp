@@ -31,7 +31,7 @@ private:
 public:
     static std::unordered_map<std::string, std::string> meetupLocationsToTreasures;
 
-    static void goToMeetupLocation(const std::string& location);
+    static void goToMeetupLocation(const std::string &location);
 
     std::unordered_set<std::string> treasureLocations;
 

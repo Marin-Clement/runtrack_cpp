@@ -8,7 +8,7 @@ std::list<std::string> Penguin::meetingPlaces;
 std::vector<std::weak_ptr<Penguin>> Penguin::allPenguins;
 std::unordered_map<std::string, std::string> Penguin::meetupLocationsToTreasures;
 
-void Penguin::goToMeetupLocation(const std::string& location) {
+void Penguin::goToMeetupLocation(const std::string &location) {
     auto found = meetupLocationsToTreasures.find(location);
     if (found != meetupLocationsToTreasures.end()) {
         // 50% chance to find the treasure

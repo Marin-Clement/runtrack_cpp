@@ -29,9 +29,9 @@ private:
 public:
     std::set<std::weak_ptr<Penguin>, std::owner_less<std::weak_ptr<Penguin>>> friends;
 
-    void addFriend(const std::shared_ptr<Penguin>& friendPenguin);
+    void addFriend(const std::shared_ptr<Penguin> &friendPenguin);
 
-    void removeFriend(const std::shared_ptr<Penguin>& friendPenguin);
+    void removeFriend(const std::shared_ptr<Penguin> &friendPenguin);
 
     std::map<std::string, int> skills;
 

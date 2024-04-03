@@ -12,16 +12,16 @@ void Penguin::addCompetitionTime(double time) {
 }
 
 void Penguin::displayCompetitionTimes() const {
-    for (const auto& time : competitionTimes) {
+    for (const auto &time: competitionTimes) {
         std::cout << "Time: " << time << "\n";
     }
 }
 
-void Penguin::addJournalEntry(const std::string& date, const std::string& description) {
+void Penguin::addJournalEntry(const std::string &date, const std::string &description) {
     journal[date] = description;
 }
 
-void Penguin::modifyJournalEntry(const std::string& date, const std::string& newDescription) {
+void Penguin::modifyJournalEntry(const std::string &date, const std::string &newDescription) {
     if (journal.find(date) != journal.end()) {
         journal[date] = newDescription;
     } else {
@@ -29,23 +29,23 @@ void Penguin::modifyJournalEntry(const std::string& date, const std::string& new
     }
 }
 
-void Penguin::removeJournalEntry(const std::string& date) {
+void Penguin::removeJournalEntry(const std::string &date) {
     journal.erase(date);
 }
 
-void Penguin::addFriend(const std::shared_ptr<Penguin>& friendPenguin) {
+void Penguin::addFriend(const std::shared_ptr<Penguin> &friendPenguin) {
     friends.insert(friendPenguin);
 }
 
-void Penguin::removeFriend(const std::shared_ptr<Penguin>& friendPenguin) {
+void Penguin::removeFriend(const std::shared_ptr<Penguin> &friendPenguin) {
     friends.erase(friendPenguin);
 }
 
-void Penguin::addSkill(const std::string& skill, int level) {
+void Penguin::addSkill(const std::string &skill, int level) {
     skills[skill] = level;
 }
 
-void Penguin::modifySkill(const std::string& skill, int level) {
+void Penguin::modifySkill(const std::string &skill, int level) {
     if (skills.find(skill) != skills.end()) {
         skills[skill] = level;
     } else {
@@ -53,12 +53,12 @@ void Penguin::modifySkill(const std::string& skill, int level) {
     }
 }
 
-void Penguin::removeSkill(const std::string& skill) {
+void Penguin::removeSkill(const std::string &skill) {
     skills.erase(skill);
 }
 
 void Penguin::listSkills() const {
-    for (const auto& skill : skills) {
+    for (const auto &skill: skills) {
         std::cout << "Skill: " << skill.first << ", Level: " << skill.second << "\n";
     }
 }
