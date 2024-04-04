@@ -6,8 +6,15 @@
 #define RUNTRACK_CPP_DECOR_HPP
 
 
-class Decor {
+#include "../GameObject/GameObject.h++"
 
+class Decor : public GameObject {
+public:
+    Decor(double x = 0.0, double y = 0.0) : GameObject(x, y) {}
+
+    void draw() override;
+
+    void update() override;
 };
 
 

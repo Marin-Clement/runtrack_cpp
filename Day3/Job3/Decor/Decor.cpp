@@ -3,3 +3,11 @@
 //
 
 #include "Decor.h++"
+
+void Decor::draw() {
+    std::cout << "Drawing a decor at position (" << getX() << ", " << getY() << ")" << std::endl;
+}
+
+void Decor::update() {
+    // Decor does not move, so this method is empty
+}

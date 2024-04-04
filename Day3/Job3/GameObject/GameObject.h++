@@ -6,6 +6,7 @@
 #define RUNTRACK_CPP_GAMEOBJECT_HPP
 
 #include "../Vector2/Vector2D.h++"
+#include <iostream>
 
 class GameObject : public Vector2d {
 public:

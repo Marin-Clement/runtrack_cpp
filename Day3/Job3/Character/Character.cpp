@@ -1,7 +1,7 @@
 #include "Character.h++"
 
 void Character::draw() {
-    // Code to draw the character goes here
+    std::cout << "Drawing a character at position (" << getX() << ", " << getY() << ")" << std::endl;
 }
 
 void Character::update() {
