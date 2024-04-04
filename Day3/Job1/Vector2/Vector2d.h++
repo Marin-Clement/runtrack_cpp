@@ -2,8 +2,8 @@
 // Created by Clément on 04/04/2024.
 //
 
-#ifndef RUNTRACK_CPP_VECTOR2D_H
-#define RUNTRACK_CPP_VECTOR2D_H
+#ifndef RUNTRACK_CPP_VECTOR2D_HPP
+#define RUNTRACK_CPP_VECTOR2D_HPP
 
 #include <cmath>
 
@@ -26,4 +26,4 @@ public:
     double distance(const Vector2d& other) const;
 };
 
-#endif //RUNTRACK_CPP_VECTOR2D_H
+#endif //RUNTRACK_CPP_VECTOR2D_HPP
