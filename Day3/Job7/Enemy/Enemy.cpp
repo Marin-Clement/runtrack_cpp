@@ -17,7 +17,7 @@ void Enemy::update() {
 }
 
 void Enemy::moveTowardsPlayer() {
-    if (player->getX() == getX() && player->getY() == getY()) {
+    if (Vector2d(getX(), getY()).distance(Vector2d(player->getX(), player->getY())) < 2) {
         attackPlayer();
     } else {
         if (player->getX() > getX()) {
