@@ -18,12 +18,20 @@ void Player::update() {
 }
 
 void Player::draw() {
-    std::cout << "0" << std::endl;
+    std::cout << " P ";
 }
 
 void Player::move(Vector2d vector) {
-    setX(getX() + vector.getX());
-    setY(getY() + vector.getY());
+    int newX = getX() + vector.getX();
+    int newY = getY() + vector.getY();
+
+    if (Game::getGameObjectAt(newX, newY)) {
+        std::cout << "Collision detected, movement cancelled." << std::endl;
+        return;
+    }
+
+    setX(newX);
+    setY(newY);
     std::cout << "Player moved to position (" << getX() << ", " << getY() << ")" << std::endl;
 }
 

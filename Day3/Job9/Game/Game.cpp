@@ -19,6 +19,15 @@ Player *Game::getPlayer() {
     return nullptr;
 }
 
+GameObject* Game::getGameObjectAt(int x, int y) {
+    for (auto& gameObject: gameObjects) {
+        if (gameObject->getX() == x && gameObject->getY() == y) {
+            return gameObject.get();
+        }
+    }
+    return nullptr;
+}
+
 void Game::update() {
     for (const auto &gameObject: gameObjects) {
         gameObject->update();
@@ -26,8 +35,25 @@ void Game::update() {
 }
 
 void Game::draw() {
-    for (const auto &gameObject: gameObjects) {
-        gameObject->draw();
+    drawGridAroundPlayer();
+}
+
+/// Draw a grid of size 10x10 around the player
+void Game::drawGridAroundPlayer() {
+    Player *player = getPlayer();
+    int playerX = player->getX();
+    int playerY = player->getY();
+
+    for (int y = playerY + 5; y >= playerY - 5; y--) {
+        for (int x = playerX - 5; x <= playerX + 5; x++) {
+            GameObject *gameObject = getGameObjectAt(x, y);
+            if (gameObject) {
+                gameObject->draw();
+            } else {
+                std::cout << " . ";
+            }
+        }
+        std::cout << std::endl;
     }
 }
 
@@ -122,9 +148,10 @@ int main() {
 
     // Boucle de jeu
     while (true) {
+        Game::draw();
+
         if (Game::handleUserInput()) {
             Game::update();
-            Game::draw();
         }
 
         // Nettoyer les GameObjects qui ne sont plus nécessaires
