@@ -23,6 +23,8 @@ public:
     virtual void update();
 
     bool collidesWith(const GameObject& other) const;
+
+    void takeDamage(int i);
 };
 
 
