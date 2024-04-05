@@ -12,6 +12,8 @@ set(SOURCE_FILES
         Day3/Job9/Player/Player.cpp
         Day3/Job9/Vector2/Vector2d.cpp
         Day3/Job9/GameObject/GameObject.cpp
+        Day3/Job10/Projectile/Projectile.cpp
+        Day3/Job10/Projectile/Projectile.h++
 )
 
 add_executable(runtrack_cpp ${SOURCE_FILES})

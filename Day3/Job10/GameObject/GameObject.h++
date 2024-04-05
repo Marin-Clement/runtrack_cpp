@@ -24,7 +24,7 @@ public:
 
     bool collidesWith(const GameObject& other) const;
 
-    static void takeDamage(int i);
+    void takeDamage(int i);
 };
 
 

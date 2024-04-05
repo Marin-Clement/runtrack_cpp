@@ -17,7 +17,3 @@ void GameObject::update() {}
 bool GameObject::collidesWith(const GameObject& other) const {
     return getX() == other.getX() && getY() == other.getY();
 }
-
-void GameObject::takeDamage(int i) {
-    std::cout << "I took " << i << " damage" << std::endl;
-}
