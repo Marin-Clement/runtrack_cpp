@@ -10,6 +10,7 @@
 class Shape {
 public:
     virtual void draw() const = 0;
+    virtual ~Shape() = default;
 };
 
 class Circle : public Shape {
