@@ -32,11 +32,13 @@ void Player::attack() {
     std::vector<Enemy *> enemies = Game::getEnemies();
 
     // Check if an enemy is in range
-    for (Enemy *enemy : enemies) {
+    for (Enemy *enemy: enemies) {
         std::cout << "Checking if enemy is in range" << std::endl;
-        std::cout << "Distance from nearest enemy: " << std::round(Vector2d(getX(), getY()).distance(Vector2d(enemy->getX(), enemy->getY()))) << std::endl;
+        std::cout << "Distance from nearest enemy: "
+                  << std::round(Vector2d(getX(), getY()).distance(Vector2d(enemy->getX(), enemy->getY()))) << std::endl;
         std::cout << "Weapon range: " << std::round(weapon->getRange()) << std::endl;
-        if (std::round(Vector2d(getX(), getY()).distance(Vector2d(enemy->getX(), enemy->getY()))) <= std::round(weapon->getRange())) {
+        if (std::round(Vector2d(getX(), getY()).distance(Vector2d(enemy->getX(), enemy->getY()))) <=
+            std::round(weapon->getRange())) {
             std::cout << "Player attacks enemy" << std::endl;
             enemy->takeDamage(weapon->getDamage());
             return;
